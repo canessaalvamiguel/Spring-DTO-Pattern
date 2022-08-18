@@ -1,8 +1,8 @@
-package com.example.dtosample.demo.persistence.repository;
+package com.example.dtosample.persistence.repository;
 
-import com.example.dtosample.demo.persistence.entity.Person;
-import com.example.dtosample.demo.persistence.projections.PersonFullLocation;
-import com.example.dtosample.demo.persistence.projections.PersonLocation;
+import com.example.dtosample.persistence.entity.Person;
+import com.example.dtosample.persistence.projections.PersonFullLocation;
+import com.example.dtosample.persistence.projections.PersonLocation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

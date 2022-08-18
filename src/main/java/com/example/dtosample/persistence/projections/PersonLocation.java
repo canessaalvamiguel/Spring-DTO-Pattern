@@ -1,4 +1,4 @@
-package com.example.dtosample.demo.persistence.projections;
+package com.example.dtosample.persistence.projections;
 
 //close projection
 public interface PersonLocation {

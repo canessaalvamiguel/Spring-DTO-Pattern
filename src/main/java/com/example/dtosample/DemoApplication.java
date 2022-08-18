@@ -1,4 +1,4 @@
-package com.example.dtosample.demo;
+package com.example.dtosample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

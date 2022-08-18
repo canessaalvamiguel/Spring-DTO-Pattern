@@ -1,9 +1,9 @@
-package com.example.dtosample.demo.controller;
+package com.example.dtosample.controller;
 
-import com.example.dtosample.demo.persistence.projections.PersonFullLocation;
-import com.example.dtosample.demo.persistence.projections.PersonLocation;
-import com.example.dtosample.demo.persistence.projections.PersonLocationDTO;
-import com.example.dtosample.demo.persistence.repository.PersonRepository;
+import com.example.dtosample.persistence.projections.PersonFullLocation;
+import com.example.dtosample.persistence.projections.PersonLocation;
+import com.example.dtosample.persistence.projections.PersonLocationDTO;
+import com.example.dtosample.persistence.repository.PersonRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,9 +1,9 @@
-package com.example.dtosample.demo.context;
+package com.example.dtosample.context;
 
-import com.example.dtosample.demo.persistence.entity.Address;
-import com.example.dtosample.demo.persistence.entity.Person;
-import com.example.dtosample.demo.persistence.repository.AddressRepository;
-import com.example.dtosample.demo.persistence.repository.PersonRepository;
+import com.example.dtosample.persistence.entity.Address;
+import com.example.dtosample.persistence.entity.Person;
+import com.example.dtosample.persistence.repository.AddressRepository;
+import com.example.dtosample.persistence.repository.PersonRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;

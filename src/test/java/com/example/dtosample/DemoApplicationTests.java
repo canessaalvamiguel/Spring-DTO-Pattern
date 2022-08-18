@@ -1,4 +1,4 @@
-package com.example.dtosample.demo;
+package com.example.dtosample;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

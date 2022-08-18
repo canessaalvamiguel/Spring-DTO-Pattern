@@ -1,4 +1,4 @@
-package com.example.dtosample.demo.persistence.entity;
+package com.example.dtosample.persistence.entity;
 
 import lombok.Data;
 
