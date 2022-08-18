@@ -3,6 +3,8 @@ package com.example.dtosample.persistence.repository;
 import com.example.dtosample.persistence.entity.Person;
 import com.example.dtosample.persistence.projections.PersonFullLocation;
 import com.example.dtosample.persistence.projections.PersonLocation;
+import com.example.dtosample.persistence.projections.PersonLocationDTO;
+import com.example.dtosample.persistence.projections.PersonLocationDTO2;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -40,4 +42,18 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
             "INNER JOIN ADDRESS A ON A.ID = P.ADDRESS_ID " +
             "WHERE P.id = :id ", nativeQuery = true)
     public Tuple getPersonLocationDTO(@Param("id") Long personId);
+
+    //using named query
+    @Query(name = "getPersonLocationDTONamingQuery", nativeQuery = true)
+    public PersonLocationDTO2 getPersonLocationDTO2(@Param("id") Long personId);
+
+    //dynamically
+    @Query(value = "SELECT " +
+            "P.NAME as name, " +
+            "P.PHONE_NUMBER as phoneNumber, " +
+            "A.STREET as street " +
+            "FROM PERSON P " +
+            "INNER JOIN ADDRESS A ON A.ID = P.ADDRESS_ID " +
+            "WHERE P.id = :id ", nativeQuery = true)
+    <T> T getPersonLocationDynamically(@Param("id") Long personId, Class<T> type);
 }

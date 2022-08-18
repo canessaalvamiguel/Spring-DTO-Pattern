@@ -3,6 +3,7 @@ package com.example.dtosample.controller;
 import com.example.dtosample.persistence.projections.PersonFullLocation;
 import com.example.dtosample.persistence.projections.PersonLocation;
 import com.example.dtosample.persistence.projections.PersonLocationDTO;
+import com.example.dtosample.persistence.projections.PersonLocationDTO2;
 import com.example.dtosample.persistence.repository.PersonRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,5 +39,16 @@ public class PersonController {
                 t.get(1, String.class),
                 t.get(2, String.class)
         );
+    }
+
+    @GetMapping("/class_based_named_query")
+    public PersonLocationDTO2 getSampleClassBasedNamedQueryProjection() {
+        return personRepository.getPersonLocationDTO2(2L);
+    }
+
+    @GetMapping("/dynamically")
+    public Object getSampleClassBasedDynamicallyProjection() {
+        return personRepository.getPersonLocationDynamically(2L, PersonLocation.class);
+        //return personRepository.getPersonLocationDynamically(2L, PersonFullLocation.class);
     }
 }
